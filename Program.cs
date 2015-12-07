@@ -22,6 +22,11 @@ namespace CardApp
             var deck = new Deck();
             deck.Shuffle();
             Console.Write(deck);
+            Console.WriteLine("----");
+            var card = deck.Draw();
+            Console.Write(deck);
+            Console.WriteLine("----");
+            Console.Write(card);
         }
     }
 }
