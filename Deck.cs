@@ -45,7 +45,18 @@ namespace CardApp
             return cards.FirstOrDefault();
         }
 
-        
+        public override string ToString()
+        {
+            String str = "";
+
+            foreach (var card  in cards)
+            {
+                str += card + "\n";
+            }
+
+            return str;
+        }
+
 
     }
 }
