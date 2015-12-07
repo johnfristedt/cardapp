@@ -19,7 +19,6 @@ namespace CardApp
 
         static void Main(string[] args)
         {
-
         }
     }
 }
