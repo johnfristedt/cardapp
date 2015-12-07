@@ -19,20 +19,28 @@ namespace CardApp
             {
                 for (int v = 2; v <= 14; v++)
                 {
-                    cards.Add(new Card())
+                    cards.Add(new Card(c, v));
                 }
             }
-
-
-
         }
 
-
         //Shuffle
+        void Shuffle()
+        {
+            Random rnd = new Random();
+            int getIndex = rnd.Next(0, 51);
+            int putIndex = rnd.Next(0, 50);
+
+            var item = cards[getIndex];
+            cards.RemoveAt(getIndex);
+            cards.Insert(putIndex, item);
+        }
 
         //Draw
-
-
+        Card Draw()
+        {
+            return cards.FirstOrDefault();
+        }
     }
 }
 
