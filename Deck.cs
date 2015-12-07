@@ -25,7 +25,7 @@ namespace CardApp
         }
 
         //Shuffle
-        void Shuffle()
+        public void Shuffle()
         {
             Random rnd = new Random();
             int getIndex = rnd.Next(0, 51);
@@ -40,12 +40,23 @@ namespace CardApp
         }
 
         //Draw
-        Card Draw()
+        public Card Draw()
         {
             return cards.FirstOrDefault();
         }
 
-        
+        public override string ToString()
+        {
+            String str = "";
+
+            foreach (var card  in cards)
+            {
+                str += card + "\n";
+            }
+
+            return str;
+        }
+
 
     }
 }
