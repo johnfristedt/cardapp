@@ -19,7 +19,7 @@ namespace CardApp
             {
                 for (int v = 2; v <= 14; v++)
                 {
-                    cards.Add(new Card(c, v));
+                    cards.Add(new Card(v, c));
                 }
             }
         }
@@ -28,11 +28,11 @@ namespace CardApp
         public void Shuffle()
         {
             Random rnd = new Random();
-            int getIndex = rnd.Next(0, 51);
-            int putIndex = rnd.Next(0, 50);
 
-            for (int i=0; i<1; i++)
-            { 
+            for (int i=0; i<10000; i++)
+            {
+                int getIndex = rnd.Next(0, 51);
+                int putIndex = rnd.Next(0, 50);
                 var item = cards[getIndex];
                 cards.RemoveAt(getIndex);
                 cards.Insert(putIndex, item);
