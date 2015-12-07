@@ -42,7 +42,9 @@ namespace CardApp
         //Draw
         public Card Draw()
         {
-            return cards.FirstOrDefault();
+            var card = cards.FirstOrDefault();
+            cards.RemoveAt(0);
+            return card;
         }
 
         public override string ToString()

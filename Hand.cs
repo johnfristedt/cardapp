@@ -31,5 +31,14 @@ namespace CardApp
             return hand;
         }
 
+        public override string ToString()
+        {
+            String str = "";
+            foreach (var card in hand)
+            {
+                str += card + "\n";
+            }
+            return str;
+        }
     }
 }

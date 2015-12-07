@@ -10,7 +10,7 @@ namespace CardApp
     {
         private enum values
         {
-            Two,
+            Two = 2,
             Three,
             Four,
             Five,
