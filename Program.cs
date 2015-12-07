@@ -19,6 +19,9 @@ namespace CardApp
 
         static void Main(string[] args)
         {
+            var deck = new Deck();
+            deck.Shuffle();
+            Console.Write(deck);
         }
     }
 }
