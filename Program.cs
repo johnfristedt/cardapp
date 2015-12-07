@@ -12,10 +12,7 @@ namespace CardApp
         public int Value { get; set; }
     }
 
-    class Deck
-    {
-        public List<Card> Cards { get; set; }
-    }
+
 
     class Hand
     {
