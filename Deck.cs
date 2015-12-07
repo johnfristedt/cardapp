@@ -31,9 +31,12 @@ namespace CardApp
             int getIndex = rnd.Next(0, 51);
             int putIndex = rnd.Next(0, 50);
 
-            var item = cards[getIndex];
-            cards.RemoveAt(getIndex);
-            cards.Insert(putIndex, item);
+            for (int i=0; i<1; i++)
+            { 
+                var item = cards[getIndex];
+                cards.RemoveAt(getIndex);
+                cards.Insert(putIndex, item);
+            }
         }
 
         //Draw
@@ -41,6 +44,9 @@ namespace CardApp
         {
             return cards.FirstOrDefault();
         }
+
+        
+
     }
 }
 
