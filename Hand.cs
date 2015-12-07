@@ -11,16 +11,16 @@ namespace CardApp
 
         private List<Card> hand = new List<Card>();
 
-        public void SortByNumber() {
-
+        public void SortByValue() {
+            hand = hand.OrderBy(c => c.Value).ToList();
         }
 
-        public void SortByType() {
-
+        public void SortByColor() {
+            hand = hand.OrderBy(c => c.Color).ToList();
         }
 
         public void SortByAll() {
-
+            hand = hand.OrderBy(c => c.Color).ThenBy(c => c.Value).ToList();
         }
 
         public void AddCard(Card card) {
