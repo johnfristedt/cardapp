@@ -8,7 +8,24 @@ namespace CardApp
 {
     class Card
     {
-        private enum Colors
+        private enum values
+        {
+            Two,
+            Three,
+            Four,
+            Five,
+            Six,
+            Seven,
+            Eight,
+            Nine,
+            Ten,
+            Jack,
+            Queen,
+            King,
+            Ace
+        }
+
+        private enum colors
         {
             Hearts,
             Diamonds,
@@ -47,7 +64,7 @@ namespace CardApp
 
         public override string ToString()
         {
-            return String.Format("{0} of {1}", this.Value, ((Colors)this.Color).ToString());
+            return String.Format("{0} of {1}", ((values)this.Value).ToString(), ((colors)this.Color).ToString());
         }
     }
 }
